@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Label.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.615686, 0.462745, 0.462745, 1 )
+corner_radius_top_left = 9
+corner_detail = 7
+
+[node name="Game" type="Spatial"]
+
+[node name="3D World" type="Node" parent="."]
+
+[node name="Player" type="Spatial" parent="3D World"]
+
+[node name="Camera" type="Camera" parent="3D World"]
+
+[node name="2D World" type="Node" parent="."]
+
+[node name="GUI" type="Node" parent="2D World"]
+
+[node name="MainMenu" type="Node2D" parent="2D World/GUI"]
+
+[node name="Label" type="Label" parent="2D World/GUI/MainMenu"]
+margin_top = 0.773788
+margin_right = 521.228
+margin_bottom = 14.7738
+custom_styles/normal = SubResource( 1 )
+text = "Main Menu"
+script = ExtResource( 1 )
